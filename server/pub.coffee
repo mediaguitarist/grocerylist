@@ -1,0 +1,1 @@
+Meteor.publish 'groceryList', -> Items.find {}

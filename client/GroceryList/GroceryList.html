@@ -1,0 +1,16 @@
+<template name="GroceryList">
+	{{#if currentUser}}
+		<ul class="list-group">
+			{{#each items}}
+				<li class="list-group-item" key="{{_id}}">
+					<p>{{name}}</p>
+					<p><small>Submitted By: {{owner}}</small></p>
+					<button class="btn btn-sm btn-danger delete">Delete</button>
+					<button class="btn btn-sm btn-primary found">Done</button>
+				</li>
+			{{/each}}
+		</ul>
+	{{else}}
+		<h1>Please login to view list.</h1>
+	{{/if}}
+</template>
